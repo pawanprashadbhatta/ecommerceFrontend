@@ -1,5 +1,14 @@
 import {createSlice,PayloadAction}from "@reduxjs/toolkit"
-
+interface registerData{
+    email:string,
+    password:string,
+    userName:string
+}
+interface loginData{
+    email:string,
+    password:string,
+   
+}
 interface User{
     uername:string,
     email:string,
@@ -30,3 +39,15 @@ state.user=action.payload
 })
 export const {setUser,setStatus} = authSlice.actions
 export default authSlice.reducer
+
+function register(data:registerData){
+    return async function registerThunk(dispatch:any){
+
+    }
+}
+
+function Login(data:loginData){
+return async function loginThunk(dispatch:any){
+    
+}
+}

@@ -1,12 +1,11 @@
-import Form from "../Form"
-
+import Form from "../Form";
 
 const Login = () => {
   return (
     <>
-    <Form/>
+      <Form formType="login" /> {/* Passing 'login' as the formType prop */}
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

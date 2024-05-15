@@ -4,7 +4,7 @@ import Form from "../Form"
 const Register = () => {
   return (
     <>
-     <Form/>
+     <Form formType="register"/>
     </>
   )
 }
