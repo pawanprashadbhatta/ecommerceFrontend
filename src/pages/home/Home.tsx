@@ -1,5 +1,6 @@
 import Card from "../../global/components/cards/Card"
 import Card2 from "../../global/components/cards/Card2"
+import Footer from "../../global/components/footer/Footer"
 import Navbar from "../../global/components/navbar/Navbar"
 
 
@@ -82,17 +83,11 @@ const Home = () => {
     <Card2/>
     
     </div> */}
-   <div className="flex flex-wrap  ">
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    {/* <Card/>
-    <Card/>
-    <Card/>  
-    <Card/> */}
-   </div>
+   
+    <Footer/>
+   
+   
+  
   </>
   )
 }
