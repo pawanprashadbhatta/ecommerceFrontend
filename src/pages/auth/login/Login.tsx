@@ -1,9 +1,12 @@
-import Form from "../Form";
+import Form1 from "../Form1";
 
 const Login = () => {
+  const handleLogin = ()=>{
+
+  }
   return (
     <>
-      <Form formType="login" /> {/* Passing 'login' as the formType prop */}
+        <Form1 type="login" onSubmit={handleLogin}/>
     </>
   );
 };

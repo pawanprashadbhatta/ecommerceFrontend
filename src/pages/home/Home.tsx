@@ -1,16 +1,18 @@
-import Card from "../../global/components/cards/Card"
+
 import Card2 from "../../global/components/cards/Card2"
 import Footer from "../../global/components/footer/Footer"
 import Navbar from "../../global/components/navbar/Navbar"
 
 
+
 const Home = () => {
   return (
     <>
+   
     {/* Hero Section: Image Side with Simple Header */}
     <div className="relative overflow-hidden bg-white dark:bg-gray-900 dark:text-gray-100">
       {/* Main Header */}
-     <Navbar/>
+     <Navbar />
       {/* END Main Header */}
 
       {/* Hero Content */}
@@ -78,11 +80,14 @@ const Home = () => {
 
     </div>
     {/* END Hero Section: Image Side with Simple Header */}
-    {/* <div className="flex flex-wrap ">
+    <div className="flex flex-wrap ">
     
     <Card2/>
-    
-    </div> */}
+    <Card2/>
+    <Card2/>
+    <Card2/>
+    <Card2/>
+    </div>
    
     <Footer/>
    

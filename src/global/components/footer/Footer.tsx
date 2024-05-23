@@ -12,8 +12,8 @@ const Footer = () => {
       >
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style={{ stopColor: '#FEC8D8', stopOpacity: 0.7 }} />
-            <stop offset="100%" style={{ stopColor: '#FDE2E4', stopOpacity: 0.8 }} />
+            <stop offset="0%" style={{ stopColor: '#FEC8D8', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#FDE2E4', stopOpacity: 1}} />
           </linearGradient>
         </defs>
         <path

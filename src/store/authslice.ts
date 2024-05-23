@@ -1,5 +1,5 @@
 import {createSlice,PayloadAction}from "@reduxjs/toolkit"
-import axios from "axios"
+
 
 import API from "../global/http"
 interface registerData{

@@ -149,4 +149,4 @@ const Form: React.FC<FormProps> = ({ formType }) => {
   );
 };
 
-export default Form;
+//to use this form u need to export first i have removed the export. export default Form garne
