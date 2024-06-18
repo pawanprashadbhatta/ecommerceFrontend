@@ -6,5 +6,12 @@ export interface Props{
 export interface UserDataType{
     email : string, 
     password : string, 
-    username : string
+    userName : string,
+    token:string
+}
+
+export interface UserLoginType{
+  email : string, 
+  password : string, 
+ 
 }

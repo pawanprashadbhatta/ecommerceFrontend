@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link,  useNavigate } from "react-router-dom"
+import { useAppSelector } from "../../../store/hook"
+import { useEffect, useState } from "react"
 
 
 const Navbar = () => {
+  const navigate=useNavigate()
+  const {user}=useAppSelector((state)=>state.auth)
+  const [isloggedIn,setIsLoggedIn]=useState<boolean>(false)
+  useEffect(()=>{
+const token=localStorage.getItem('token')
+setIsLoggedIn(!!token||!!user.token)
+  },[user.token])
+
+  const handlelogedOut=()=>{
+    localStorage.removeItem("token")
+    setIsLoggedIn(false)
+    navigate("/login")
+  }
   return (
     <>
      <header
@@ -28,7 +43,7 @@ const Navbar = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>GhusudiBazar</span>
+              <span>Bazar</span>
             </Link>
           </div>
           <nav className="space-x-3 md:space-x-6">
@@ -38,6 +53,9 @@ const Navbar = () => {
             >
               <span>Home</span>
             </Link> */}
+            { 
+            !isloggedIn ?( 
+            <>
             <Link
               to="/login"
               className="text-sm font-semibold text-gray-900 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
@@ -50,6 +68,18 @@ const Navbar = () => {
             >
               <span>Register</span>
             </Link>
+            </>
+          ):(
+
+            <Link
+            to='#'
+             onClick={handlelogedOut}
+              className="text-sm font-semibold text-gray-900 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
+            >
+              <span>Logout</span>
+            </Link>
+          )
+        }
           </nav>
         </div>
         {/* END Main Header Content */}
